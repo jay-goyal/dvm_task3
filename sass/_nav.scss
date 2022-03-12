@@ -1,0 +1,48 @@
+@use "globals/vars";
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 30px 50px;
+
+  #nav-toggle {
+    .bar {
+      width: 50px;
+      height: 2px;
+      background-color: black;
+      margin-bottom: 8px;
+    }
+  }
+
+  #nav-middle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    grid-column-gap: 100px;
+
+    #icon-svg {
+      fill: vars.$black;
+      transition: all 200ms ease-in-out;
+      cursor: pointer;
+
+      &:hover,
+      &:active {
+        fill: vars.$neon-green;
+      }
+    }
+  }
+
+  #nav-end {
+    justify-self: end;
+
+    &::after {
+      content: "ES | 中文";
+      position: absolute;
+      font-size: 0.9rem;
+      top: 82px;
+      right: 86px;
+    }
+  }
+}

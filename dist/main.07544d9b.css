@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap");
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 30px 50px;
+}
+nav #nav-toggle .bar {
+  width: 50px;
+  height: 2px;
+  background-color: black;
+  margin-bottom: 8px;
+}
+nav #nav-middle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  grid-column-gap: 100px;
+}
+nav #nav-middle #icon-svg {
+  fill: #131313;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+nav #nav-middle #icon-svg:hover, nav #nav-middle #icon-svg:active {
+  fill: #04c75c;
+}
+nav #nav-end {
+  justify-self: end;
+}
+nav #nav-end::after {
+  content: "ES | 中文";
+  position: absolute;
+  font-size: 0.9rem;
+  top: 82px;
+  right: 86px;
+}
+
+.text-thin {
+  color: #131313;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+.btn-round {
+  padding: 10px 30px;
+  border: 1px solid #131313;
+  border-radius: 50px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: #131313;
+  background-color: #faf9f7;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.btn-round:hover, .btn-round:active {
+  background-color: #04c75c;
+  color: #ffffff;
+  border-color: #04c75c;
+}
+
+.link-empty {
+  color: #131313;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.link-empty:hover, .link-empty:active {
+  color: #04c75c;
+}
+
+:root {
+  font-size: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #faf9f7;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/*# sourceMappingURL=/main.07544d9b.css.map */

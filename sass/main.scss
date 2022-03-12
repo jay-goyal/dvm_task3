@@ -1,0 +1,19 @@
+@use "nav";
+@use "globals/helpers";
+@use "globals/vars";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap");
+
+:root {
+  font-size: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: vars.$off-white;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}

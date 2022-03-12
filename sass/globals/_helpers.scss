@@ -1,0 +1,39 @@
+@use "vars";
+
+.text-thin {
+  color: vars.$black;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+.btn-round {
+  padding: 10px 30px;
+  border: 1px solid vars.$black;
+  border-radius: 50px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: vars.$black;
+  background-color: vars.$off-white;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+
+  &:hover,
+  &:active {
+    background-color: vars.$neon-green;
+    color: vars.$white;
+    border-color: vars.$neon-green;
+  }
+}
+
+.link-empty {
+  color: vars.$black;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+
+  &:hover,
+  &:active {
+    color: vars.$neon-green;
+  }
+}
