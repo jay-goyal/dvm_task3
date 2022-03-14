@@ -117,9 +117,47 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"ts/index.ts":[function(require,module,exports) {
+})({"ts/hero.ts":[function(require,module,exports) {
+var heroPar = document.querySelector("#hero-par");
+var heroImg = document.querySelector("#hero-img");
+var heroLink = document.querySelector("#hero-link");
+var nextElem = document.querySelector("#next");
+var prevElem = document.querySelector("#prev");
+var currElem = 0;
 
-},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var setElem = function setElem() {
+  heroPar.innerText = elements[currElem].text;
+  heroImg.style.backgroundImage = "url(\"".concat(elements[currElem].image, "\")");
+  heroLink.innerText = elements[currElem].link;
+};
+
+var elements = [{
+  text: "Phase One is free and open daily",
+  image: "../img/hero/img1.avif",
+  link: "Plan your visit"
+}, {
+  text: "Turning historic tracks into an unparalleled park",
+  image: "img/hero/img2.avif",
+  link: "See the full version"
+}];
+setElem();
+nextElem.addEventListener("click", function () {
+  currElem = 1 - currElem;
+  setElem();
+});
+prevElem.addEventListener("click", function () {
+  currElem = 1 - currElem;
+  setElem();
+});
+},{}],"ts/index.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+require("./hero");
+},{"./hero":"ts/hero.ts"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -147,7 +185,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38051" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35553" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

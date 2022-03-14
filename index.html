@@ -10,7 +10,6 @@
     <script src="./ts/index.ts" defer></script>
     <link rel="stylesheet" href="./sass/main.scss" />
     <title>The Rail Park</title>
-    <link rel="stylesheet" href="sass/_nav.scss" />
   </head>
   <body>
     <nav>
@@ -35,6 +34,59 @@
         <div class="text-thin link-empty">VISION</div>
       </div>
       <button class="btn-round text-thin" id="nav-end">DONATE</button>
+      <p id="lang-change">
+        <span class="link-empty">ES &nbsp;</span> |
+        <span class="link-empty">&nbsp; 中文</span>
+      </p>
     </nav>
+
+    <section id="hero">
+      <div id="hero-head-cont">
+        <p id="hero-heading">The Rail<br />Park</p>
+      </div>
+      <div id="hero-content">
+        <div>
+          <button class="left-arr" id="prev">
+            <svg
+              width="54"
+              height="13"
+              viewBox="0 0 54 13"
+              fill="#131313"
+              xmlns="http://www.w3.org/2000/svg"
+              style="transform: rotate(180deg)"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M51.8697 5.99991L47.63 1.33625L48.37 0.663574L53.37 6.16357L53.6757 6.49991L53.37 6.83625L48.37 12.3362L47.63 11.6636L51.8697 6.99991H-1.14441e-05V5.99991H51.8697Z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div id="hero-cont">
+          <p id="hero-par" class="regular-par"></p>
+          <div class="link-empty-rev" id="hero-link"></div>
+        </div>
+        <div id="hero-img"></div>
+        <div>
+          <button class="right-arr" id="next">
+            <svg
+              width="54"
+              height="13"
+              viewBox="0 0 54 13"
+              fill="#131313"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M51.8697 5.99991L47.63 1.33625L48.37 0.663574L53.37 6.16357L53.6757 6.49991L53.37 6.83625L48.37 12.3362L47.63 11.6636L51.8697 6.99991H-1.14441e-05V5.99991H51.8697Z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="hero-gif"></div>
+    </section>
   </body>
 </html>

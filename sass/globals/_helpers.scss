@@ -3,7 +3,7 @@
 .text-thin {
   color: vars.$black;
   font-weight: 300;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.5;
   letter-spacing: 0.5px;
 }
@@ -15,7 +15,6 @@
   font-weight: 300;
   letter-spacing: 0.5px;
   color: vars.$black;
-  background-color: vars.$off-white;
   cursor: pointer;
   transition: all 200ms ease-in-out;
 
@@ -35,5 +34,38 @@
   &:hover,
   &:active {
     color: vars.$neon-green;
+  }
+}
+.link-empty-rev {
+  color: vars.$neon-green;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+
+  &:hover,
+  &:active {
+    color: vars.$black;
+  }
+}
+
+.regular-par {
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+}
+
+.right-arr {
+  transition: all 100ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateX(5px);
+  }
+}
+.left-arr {
+  transition: all 100ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateX(-5px);
   }
 }
