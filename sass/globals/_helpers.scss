@@ -8,6 +8,14 @@
   letter-spacing: 0.5px;
 }
 
+.section-heading {
+  font-size: 4.5rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  line-height: 1.1;
+}
+
 .btn-round {
   padding: 10px 30px;
   border: 1px solid vars.$black;
@@ -61,11 +69,28 @@
     transform: translateX(5px);
   }
 }
+
 .left-arr {
   transition: all 100ms ease-in-out;
   cursor: pointer;
 
   &:hover {
     transform: translateX(-5px);
+  }
+}
+
+.svg-green-on-hover-stroke {
+  stroke: vars.$black;
+
+  &:hover {
+    stroke: vars.$neon-green;
+  }
+}
+
+.svg-green-on-hover-fill {
+  fill: vars.$black;
+
+  &:hover {
+    fill: vars.$neon-green;
   }
 }
