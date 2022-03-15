@@ -413,6 +413,97 @@ nav #lang-change {
   transform: translateX(2px) translateY(-2px);
 }
 
+#mailing {
+  background: #0cee72;
+  padding: 60px 0;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+}
+#mailing-email {
+  border-bottom: 1px solid rgba(19, 19, 19, 0.5);
+  height: min-content;
+  width: 40%;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  transition: all 200ms ease-in-out;
+}
+#mailing-email:focus-within {
+  border-bottom: 1px solid #131313;
+}
+#mailing-email input {
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  background: none;
+  padding-bottom: 2px;
+  transition: all 200ms ease-in-out;
+}
+#mailing-email input::placeholder {
+  font-size: 2rem;
+  color: #131313;
+  opacity: 50%;
+}
+#mailing-email input:focus::placeholder {
+  opacity: 25%;
+}
+
+#footer {
+  background: #131313;
+  margin: 0 auto;
+  padding: 100px 50px;
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+#footer .xsmall-par {
+  color: #faf9f7;
+}
+#footer .small-par {
+  color: #faf9f7;
+}
+#footer .link-empty {
+  color: #faf9f7;
+}
+#footer .link-empty:hover {
+  color: #0cee72;
+}
+#footer .footer-info {
+  align-self: end;
+}
+#footer .fa-brands {
+  margin-right: 20px;
+  cursor: pointer;
+}
+#footer .fa-instagram:hover {
+  color: #f00075;
+}
+#footer .fa-twitter:hover {
+  color: #1e9bf0;
+}
+#footer .fa-facebook:hover {
+  color: #1878f2;
+}
+#footer-donate {
+  display: grid;
+  height: max-content;
+  grid-row: 1/span 2;
+}
+#footer-donate #donate-svg {
+  cursor: pointer;
+  z-index: 1;
+  grid-area: 1/1/auto/auto;
+  fill: #faf9f7;
+}
+#footer-donate video {
+  grid-area: 1/1/auto/auto;
+  transform: scale(0.6);
+  transform-origin: 7.5% 7.5%;
+  top: 0;
+  left: 0;
+}
+
 :root {
   font-size: 100%;
 }

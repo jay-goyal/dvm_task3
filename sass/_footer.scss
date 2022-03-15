@@ -1,0 +1,69 @@
+@use "globals/vars";
+
+#footer {
+  background: vars.$black;
+  margin: 0 auto;
+  padding: 100px 50px;
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+
+  .xsmall-par {
+    color: vars.$off-white;
+  }
+
+  .small-par {
+    color: vars.$off-white;
+  }
+
+  .link-empty {
+    color: vars.$off-white;
+
+    &:hover {
+      color: vars.$neon-green-light;
+    }
+  }
+
+  .footer-info {
+    align-self: end;
+  }
+
+  .fa-brands {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .fa-instagram:hover {
+    color: rgb(240, 0, 117);
+  }
+
+  .fa-twitter:hover {
+    color: rgb(30, 155, 240);
+  }
+
+  .fa-facebook:hover {
+    color: rgb(24, 120, 242);
+  }
+
+  &-donate {
+    display: grid;
+    height: max-content;
+    grid-row: 1 / span 2;
+
+    #donate-svg {
+      cursor: pointer;
+      z-index: 1;
+      grid-area: 1/ 1 / auto/ auto;
+      fill: vars.$off-white;
+    }
+
+    video {
+      grid-area: 1/ 1 / auto/ auto;
+      transform: scale(0.6);
+      transform-origin: 7.5% 7.5%;
+      top: 0;
+      left: 0;
+    }
+  }
+}
