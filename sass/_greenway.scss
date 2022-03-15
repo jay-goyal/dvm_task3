@@ -1,0 +1,23 @@
+@use "globals/vars";
+
+#greenway {
+  width: clamp(250px, 75%, 1100px);
+  margin: 0 auto 150px;
+
+  &-spl {
+    color: vars.$neon-green;
+  }
+
+  p:first-child {
+    margin-bottom: 50px;
+  }
+
+  &-footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &-end {
+      justify-self: start;
+    }
+  }
+}

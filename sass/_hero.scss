@@ -1,7 +1,16 @@
 #hero {
+  position: relative;
+
   &-head-cont {
-    width: clamp(300px, 80%, 1200px);
+    width: clamp(250px, 75%, 1100px);
     margin: 30px auto 0;
+  }
+
+  &-rotate {
+    position: absolute;
+    top: 200px;
+    right: 80px;
+    z-index: 1;
   }
 
   &-content {

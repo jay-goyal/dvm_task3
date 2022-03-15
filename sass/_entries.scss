@@ -2,7 +2,7 @@
 
 #entries {
   width: clamp(250px, 75%, 1100px);
-  margin: auto;
+  margin: 0 auto 150px;
 
   &-heading {
     display: grid;
@@ -46,7 +46,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      transition: all 100ms ease-in-out;
+      transition: all 200ms ease-in-out;
     }
 
     &:hover {

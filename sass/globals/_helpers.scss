@@ -61,6 +61,12 @@
   margin: 0;
 }
 
+.small-par {
+  font-size: 2rem;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
 .right-arr {
   transition: all 100ms ease-in-out;
   cursor: pointer;
@@ -93,4 +99,17 @@
   &:hover {
     fill: vars.$neon-green;
   }
+}
+
+@keyframes rotate-img {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.img-rotate {
+  animation: rotate-img infinite 25s linear;
 }
