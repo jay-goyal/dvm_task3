@@ -62,6 +62,13 @@
   margin: 0 0 20px;
 }
 
+.xsmall-par {
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding: 0;
+  margin: 20px 0;
+}
+
 .right-arr {
   transition: all 100ms ease-in-out;
   cursor: pointer;
@@ -346,6 +353,28 @@ nav #lang-change {
 }
 #vision .vision-vid:hover {
   opacity: 100%;
+}
+
+#tour {
+  width: clamp(250px, 75%, 1100px);
+  margin: 0 auto 150px;
+  display: grid;
+  grid-column-gap: 20px;
+  background: #ffffff;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+}
+#tour-img {
+  background-image: url("/tour.0994c481.avif");
+  background-size: cover;
+}
+#tour-info {
+  padding: 20px 0;
+}
+#tour-svg {
+  top: -50px;
+  right: 50px;
+  position: absolute;
 }
 
 :root {

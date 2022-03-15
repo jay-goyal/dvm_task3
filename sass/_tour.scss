@@ -1,0 +1,26 @@
+@use "globals/vars";
+
+#tour {
+  width: clamp(250px, 75%, 1100px);
+  margin: 0 auto 150px;
+  display: grid;
+  grid-column-gap: 20px;
+  background: vars.$white;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+
+  &-img {
+    background-image: url("../img/tour.avif");
+    background-size: cover;
+  }
+
+  &-info {
+    padding: 20px 0;
+  }
+
+  &-svg {
+    top: -50px;
+    right: 50px;
+    position: absolute;
+  }
+}
