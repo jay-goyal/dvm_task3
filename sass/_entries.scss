@@ -57,13 +57,13 @@
       .left-arr {
         transform: translateX(-5px);
         svg {
-          stroke: vars.$neon-green;
+          stroke: vars.$neon-green-light;
         }
       }
       .right-arr {
         transform: translateX(5px);
         svg {
-          stroke: vars.$neon-green;
+          stroke: vars.$neon-green-light;
         }
       }
     }

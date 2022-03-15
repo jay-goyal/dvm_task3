@@ -28,9 +28,9 @@
 
   &:hover,
   &:active {
-    background-color: vars.$neon-green;
+    background-color: vars.$neon-green-light;
     color: vars.$white;
-    border-color: vars.$neon-green;
+    border-color: vars.$neon-green-light;
   }
 }
 
@@ -41,11 +41,11 @@
 
   &:hover,
   &:active {
-    color: vars.$neon-green;
+    color: vars.$neon-green-light;
   }
 }
 .link-empty-rev {
-  color: vars.$neon-green;
+  color: vars.$neon-green-light;
   cursor: pointer;
   transition: all 200ms ease-in-out;
 
@@ -96,7 +96,7 @@
   stroke: vars.$black;
 
   &:hover {
-    stroke: vars.$neon-green;
+    stroke: vars.$neon-green-light;
   }
 }
 
@@ -104,7 +104,7 @@
   fill: vars.$black;
 
   &:hover {
-    fill: vars.$neon-green;
+    fill: vars.$neon-green-light;
   }
 }
 

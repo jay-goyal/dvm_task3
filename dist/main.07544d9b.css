@@ -27,9 +27,9 @@
   transition: all 200ms ease-in-out;
 }
 .btn-round:hover, .btn-round:active {
-  background-color: #04c75c;
+  background-color: #0cee72;
   color: #ffffff;
-  border-color: #04c75c;
+  border-color: #0cee72;
 }
 
 .link-empty {
@@ -38,11 +38,11 @@
   transition: all 200ms ease-in-out;
 }
 .link-empty:hover, .link-empty:active {
-  color: #04c75c;
+  color: #0cee72;
 }
 
 .link-empty-rev {
-  color: #04c75c;
+  color: #0cee72;
   cursor: pointer;
   transition: all 200ms ease-in-out;
 }
@@ -89,14 +89,14 @@
   stroke: #131313;
 }
 .svg-green-on-hover-stroke:hover {
-  stroke: #04c75c;
+  stroke: #0cee72;
 }
 
 .svg-green-on-hover-fill {
   fill: #131313;
 }
 .svg-green-on-hover-fill:hover {
-  fill: #04c75c;
+  fill: #0cee72;
 }
 
 @keyframes rotate-img {
@@ -250,13 +250,13 @@ nav #lang-change {
   transform: translateX(-5px);
 }
 #entries .entry:hover .left-arr svg {
-  stroke: #04c75c;
+  stroke: #0cee72;
 }
 #entries .entry:hover .right-arr {
   transform: translateX(5px);
 }
 #entries .entry:hover .right-arr svg {
-  stroke: #04c75c;
+  stroke: #0cee72;
 }
 #entries .entry-content {
   display: grid;
@@ -287,7 +287,7 @@ nav #lang-change {
   margin: 0 auto 150px;
 }
 #greenway-spl {
-  color: #04c75c;
+  color: #0cee72;
 }
 #greenway p:first-child {
   margin-bottom: 50px;
@@ -375,6 +375,42 @@ nav #lang-change {
   top: -50px;
   right: 50px;
   position: absolute;
+}
+
+#events {
+  width: clamp(400px, 95%, 1400px);
+  margin: 0 auto 150px;
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  cursor: pointer;
+}
+#events-heading {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  justify-self: start;
+  align-self: start;
+}
+#events .event img {
+  max-width: 100%;
+  margin-bottom: 20px;
+  transition: all 200ms ease-in-out;
+}
+#events .event-more::after {
+  content: "↗";
+  display: inline-block;
+  margin-left: 2px;
+}
+#events .event:hover img {
+  transform: translateY(-10px);
+  opacity: 90%;
+}
+#events .event:hover .event-more {
+  color: #0cee72;
+}
+#events .event:hover .event-more::after {
+  transform: translateX(2px) translateY(-2px);
 }
 
 :root {
