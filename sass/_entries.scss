@@ -8,17 +8,17 @@
   &-heading {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    transform: translateY(20px);
-    opacity: 0;
 
     .section-heading {
       justify-self: end;
+      transform: translateX(-20px);
+      opacity: 0;
 
       &:first-child {
         padding-right: 40px;
       }
       &.open {
-        transform: translateY(0);
+        transform: translateX(0);
         opacity: 1;
       }
     }

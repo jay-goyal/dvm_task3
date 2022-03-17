@@ -10,10 +10,13 @@ const addOpen = (entries: IntersectionObserverEntry[], observer) => {
   });
 };
 
-const obsOptions = {};
+const obsOptions = {
+  root: null,
+  threshold: 0.3,
+};
 const obs = new IntersectionObserver(addOpen, obsOptions);
-
-obs.observe(document.querySelector("body"));
+const entryHeads = document.querySelectorAll(".section-heading");
+entryHeads.forEach((elem) => obs.observe(elem));
 
 let lastScrollY = window.scrollY;
 window.addEventListener("scroll", () => {

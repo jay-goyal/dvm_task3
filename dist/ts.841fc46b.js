@@ -182,9 +182,15 @@ var addOpen = function addOpen(entries, observer) {
   });
 };
 
-var obsOptions = {};
+var obsOptions = {
+  root: null,
+  threshold: 0.3
+};
 var obs = new IntersectionObserver(addOpen, obsOptions);
-obs.observe(document.querySelector("body"));
+var entryHeads = document.querySelectorAll(".section-heading");
+entryHeads.forEach(function (elem) {
+  return obs.observe(elem);
+});
 var lastScrollY = window.scrollY;
 window.addEventListener("scroll", function () {
   if (lastScrollY < window.scrollY) {
