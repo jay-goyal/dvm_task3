@@ -110,6 +110,19 @@
   }
 }
 
+.link-arr {
+  &::after {
+    content: "→";
+    font-size: 1.5em;
+  }
+
+  &:hover {
+    &::after {
+      transform: translateX(2px);
+    }
+  }
+}
+
 @keyframes rotate-img {
   0% {
     transform: rotate(0deg);

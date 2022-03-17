@@ -101,6 +101,14 @@
   fill: #04c75c;
 }
 
+.link-arr::after {
+  content: "→";
+  font-size: 1.5em;
+}
+.link-arr:hover::after {
+  transform: translateX(2px);
+}
+
 @keyframes rotate-img {
   0% {
     transform: rotate(0deg);
@@ -213,6 +221,7 @@ nav #nav-cont #lang-change {
   margin: 30px auto 0;
   transform: translateY(20px);
   opacity: 0;
+  transition: all 500ms ease-in-out;
 }
 #hero-head-cont.open {
   transform: translateY(0);
@@ -269,6 +278,7 @@ nav #nav-cont #lang-change {
   margin-bottom: 20px;
   transform: translateY(20px);
   opacity: 0;
+  transition: all 500ms ease-in-out;
 }
 #hero-par.open {
   transform: translateY(0);
@@ -278,6 +288,7 @@ nav #nav-cont #lang-change {
   font-size: 2rem;
   transform: translateY(20px);
   opacity: 0;
+  transition: all 500ms ease-in-out;
 }
 #hero-link.open {
   transform: translateY(0);
@@ -291,6 +302,7 @@ nav #nav-cont #lang-change {
   transform: rotate(20deg);
   opacity: 0;
   transform-origin: top left;
+  transition: all 500ms ease-in-out;
 }
 #hero-img.open {
   opacity: 1;
@@ -327,6 +339,7 @@ nav #nav-cont #lang-change {
   justify-self: end;
   transform: translateX(-20px);
   opacity: 0;
+  transition: all 500ms ease-in-out;
 }
 #entries-heading .section-heading:first-child {
   padding-right: 40px;
@@ -349,10 +362,32 @@ nav #nav-cont #lang-change {
   grid-column-gap: 50px;
   margin-bottom: 100px;
 }
+#entries .entry-heading {
+  position: relative;
+}
 #entries .entry-img {
   background-size: cover;
   height: 100%;
   border-radius: 5px;
+}
+#entries .entry-tooltip {
+  visibility: hidden;
+  width: max-content;
+  background: #0cee72;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 200ms ease-in-out;
+  position: absolute;
+  top: -30px;
+  left: 310px;
+}
+#entries .entry-svg {
+  transition: all 200ms ease-in-out;
+}
+#entries .entry-svg:hover + .entry-tooltip {
+  visibility: visible;
 }
 #entries .entry .left-arr svg {
   transform: rotate(-90deg);
@@ -445,6 +480,7 @@ nav #nav-cont #lang-change {
   transform: translateY(20px);
   opacity: 0;
   z-index: 2;
+  transition: all 500ms ease-in-out;
 }
 #greenway p:first-child.open {
   transform: translateY(0);
@@ -885,7 +921,6 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: "Source Sans Pro", sans-serif;
-  transition: all 500ms ease-in-out;
 }
 
 button {

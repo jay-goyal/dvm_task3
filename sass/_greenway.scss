@@ -11,6 +11,7 @@
     transform: translateY(20px);
     opacity: 0;
     z-index: 2;
+    transition: all 500ms ease-in-out;
 
     &.open {
       transform: translateY(0);

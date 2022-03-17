@@ -13,6 +13,7 @@
       justify-self: end;
       transform: translateX(-20px);
       opacity: 0;
+      transition: all 500ms ease-in-out;
 
       &:first-child {
         padding-right: 40px;
@@ -40,10 +41,36 @@
     grid-column-gap: 50px;
     margin-bottom: 100px;
 
+    &-heading {
+      position: relative;
+    }
+
     &-img {
       background-size: cover;
       height: 100%;
       border-radius: 5px;
+    }
+
+    &-tooltip {
+      visibility: hidden;
+      width: max-content;
+      background: vars.$neon-green-light;
+      color: vars.$white;
+      text-align: center;
+      padding: 10px;
+      border-radius: 8px;
+      transition: all 200ms ease-in-out;
+      position: absolute;
+      top: -30px;
+      left: 310px;
+    }
+
+    &-svg {
+      transition: all 200ms ease-in-out;
+    }
+
+    &-svg:hover + .entry-tooltip {
+      visibility: visible;
     }
 
     .left-arr svg {
