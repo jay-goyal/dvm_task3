@@ -4,6 +4,7 @@
 #greenway {
   width: clamp(300px, 85%, 1100px);
   margin: 0 auto 150px;
+  z-index: 2;
 
   &-spl {
     color: vars.$rail-park-green;

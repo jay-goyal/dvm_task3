@@ -417,6 +417,7 @@ nav #nav-cont #lang-change {
 #greenway {
   width: clamp(300px, 85%, 1100px);
   margin: 0 auto 150px;
+  z-index: 2;
 }
 #greenway-spl {
   color: #00b451;
