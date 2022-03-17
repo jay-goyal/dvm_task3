@@ -191,15 +191,26 @@ var entryHeads = document.querySelectorAll(".section-heading");
 entryHeads.forEach(function (elem) {
   return obs.observe(elem);
 });
+obs.observe(document.querySelector("#hero-head-cont"));
+obs.observe(document.querySelector("#hero-par"));
+obs.observe(document.querySelector("#hero-link"));
+obs.observe(document.querySelector("#hero-img"));
 var lastScrollY = window.scrollY;
 window.addEventListener("scroll", function () {
-  if (lastScrollY < window.scrollY) {
+  if (lastScrollY > window.scrollY) {
     nav.id = "nav-open";
-    setTimeout(function () {
-      nav.id = "nav-closed";
-    }, 1000);
+
+    if (window.scrollY !== 0) {
+      setTimeout(function () {
+        nav.id = "nav-closed";
+      }, 1000);
+    }
   } else {
     nav.id = "nav-closed";
+  }
+
+  if (window.scrollY === 0) {
+    nav.id = "nav-open";
   }
 
   lastScrollY = window.scrollY;
