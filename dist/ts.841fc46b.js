@@ -228,6 +228,11 @@ window.addEventListener("scroll", function () {
 
   lastScrollY = window.scrollY;
 });
+var mailInput = document.querySelector("#mailing-email > input");
+var mailBtn = document.querySelector("#mailing-email > .right-arr");
+mailBtn.addEventListener("click", function () {
+  return mailInput.value = "";
+});
 },{"./hero":"ts/hero.ts"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

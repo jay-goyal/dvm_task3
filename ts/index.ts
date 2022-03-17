@@ -37,3 +37,12 @@ window.addEventListener("scroll", () => {
 
   lastScrollY = window.scrollY;
 });
+
+const mailInput = document.querySelector(
+  "#mailing-email > input"
+) as HTMLInputElement;
+const mailBtn = document.querySelector(
+  "#mailing-email > .right-arr"
+) as HTMLDivElement;
+
+mailBtn.addEventListener("click", () => (mailInput.value = ""));
