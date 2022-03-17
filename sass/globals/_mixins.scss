@@ -1,0 +1,17 @@
+@mixin big-tab() {
+  @media (max-width: 750px) {
+    @content;
+  }
+}
+
+@mixin small-tab() {
+  @media (max-width: 620px) {
+    @content;
+  }
+}
+
+@mixin mob() {
+  @media (max-width: 480px) {
+    @content;
+  }
+}

@@ -1,7 +1,8 @@
 @use "globals/vars";
+@use "globals/mixins";
 
 #tour {
-  width: clamp(250px, 75%, 1100px);
+  width: clamp(300px, 85%, 1100px);
   margin: 0 auto 150px;
   display: grid;
   grid-column-gap: 20px;
@@ -9,18 +10,35 @@
   grid-template-columns: repeat(2, 1fr);
   position: relative;
 
+  @include mixins.big-tab() {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr;
+  }
+
   &-img {
-    background-image: url("../img/tour.avif");
-    background-size: cover;
+    img {
+      max-width: 100%;
+    }
   }
 
   &-info {
-    padding: 20px 0;
+    padding: 40px 0;
   }
 
   &-svg {
     top: -50px;
     right: 50px;
     position: absolute;
+  }
+
+  &:hover {
+    #tour-img {
+      animation: scale-bg-up 200ms ease-in-out;
+      background-size: 102%;
+    }
+
+    .link-empty {
+      color: vars.$neon-green-light;
+    }
   }
 }

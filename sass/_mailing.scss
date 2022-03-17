@@ -1,4 +1,5 @@
 @use "globals/vars";
+@use "globals/mixins";
 
 #mailing {
   background: vars.$neon-green-light;
@@ -8,24 +9,29 @@
   justify-items: center;
 
   &-email {
-    border-bottom: 1px solid rgba(19, 19, 19, 0.5);
     height: min-content;
     width: 40%;
     display: grid;
     grid-template-columns: 1fr min-content;
     transition: all 200ms ease-in-out;
 
-    &:focus-within {
-      border-bottom: 1px solid vars.$black;
+    @include mixins.small-tab() {
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: 1fr;
     }
 
     input {
-      font-size: 2rem;
       border: none;
+      border-bottom: 1px solid rgba(19, 19, 19, 0.5);
+      font-size: 2rem;
       outline: none;
       background: none;
       padding-bottom: 2px;
       transition: all 200ms ease-in-out;
+
+      &:focus {
+        border-bottom: 1px solid vars.$black;
+      }
 
       &::placeholder {
         font-size: 2rem;

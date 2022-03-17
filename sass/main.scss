@@ -1,5 +1,6 @@
 @use "globals/helpers";
 @use "globals/vars";
+@use "globals/mixins";
 @use "nav";
 @use "hero";
 @use "entries";
@@ -13,15 +14,20 @@
 
 :root {
   font-size: 100%;
+
+  @include mixins.big-tab() {
+    font-size: 70%;
+  }
 }
 
 body {
-  padding: 0;
-  margin: 0;
   background-color: vars.$off-white;
+  overflow-x: hidden;
 }
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
   font-family: "Source Sans Pro", sans-serif;
 }

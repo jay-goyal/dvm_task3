@@ -1,16 +1,23 @@
+@use "globals/mixins";
+
 #hero {
   position: relative;
 
   &-head-cont {
-    width: clamp(250px, 75%, 1100px);
+    width: clamp(300px, 85%, 1100px);
     margin: 30px auto 0;
   }
 
-  &-rotate {
+  &-svg {
     position: absolute;
     top: 200px;
     right: 80px;
     z-index: 1;
+
+    @include mixins.big-tab() {
+      top: 85px;
+      right: 20px;
+    }
   }
 
   &-content {
@@ -20,6 +27,26 @@
     transform: translateY(-50px);
     grid-column-gap: 50px;
     align-items: center;
+
+    @include mixins.big-tab() {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, min-content);
+      grid-row-gap: 40px;
+      transform: translateY(0);
+
+      #hero-img {
+        grid-row: 1;
+      }
+
+      #hero-cont {
+        grid-row: 2;
+      }
+
+      .left-arr,
+      .right-arr {
+        display: none;
+      }
+    }
   }
 
   &-heading {

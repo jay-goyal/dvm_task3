@@ -1,7 +1,8 @@
 @use "globals/vars";
+@use "globals/mixins";
 
 #entries {
-  width: clamp(250px, 75%, 1100px);
+  width: clamp(300px, 85%, 1100px);
   margin: 0 auto 150px;
 
   &-heading {
@@ -13,6 +14,16 @@
 
       &:first-child {
         padding-right: 40px;
+      }
+    }
+
+    @include mixins.big-tab() {
+      .section-heading {
+        justify-self: center;
+
+        &:first-child {
+          padding-right: 0;
+        }
       }
     }
   }
@@ -27,7 +38,6 @@
       background-size: cover;
       height: 100%;
       border-radius: 5px;
-      position: relative;
     }
 
     .left-arr svg {
@@ -41,12 +51,10 @@
     &-vid {
       opacity: 0;
       object-fit: fill;
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       transition: all 200ms ease-in-out;
+      border-radius: 5px;
     }
 
     &:hover {
@@ -96,6 +104,42 @@
       &:hover {
         &::after {
           transform: translateX(2px) translateY(-2px);
+        }
+      }
+    }
+
+    @include mixins.big-tab() {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-row-gap: 20px;
+
+      .left-arr svg,
+      .right-arr svg {
+        transform: rotate(0);
+      }
+
+      &:hover {
+        .left-arr {
+          transform: translateY(-5px);
+        }
+        .right-arr {
+          transform: translateY(-5px);
+        }
+      }
+
+      &-content {
+        grid-row: 2;
+      }
+
+      &-img {
+        grid-row: 1;
+      }
+
+      &-heading {
+        svg {
+          align-self: start;
+          justify-self: end;
+          transform: translateY(-80px) scale(0.8);
         }
       }
     }

@@ -1,11 +1,12 @@
 @use "globals/vars";
+@use "globals/mixins";
 
 #greenway {
-  width: clamp(250px, 75%, 1100px);
+  width: clamp(300px, 85%, 1100px);
   margin: 0 auto 150px;
 
   &-spl {
-    color: vars.$neon-green-light;
+    color: vars.$rail-park-green;
   }
 
   p:first-child {
@@ -18,6 +19,15 @@
 
     &-end {
       justify-self: start;
+    }
+
+    @include mixins.big-tab() {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+
+      &-end {
+        justify-self: start;
+      }
     }
   }
 }

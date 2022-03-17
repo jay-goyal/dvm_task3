@@ -118,12 +118,15 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"ts/hero.ts":[function(require,module,exports) {
+var hero = document.querySelector("#hero");
 var heroPar = document.querySelector("#hero-par");
 var heroImg = document.querySelector("#hero-img");
 var heroLink = document.querySelector("#hero-link");
 var nextElem = document.querySelector("#next");
 var prevElem = document.querySelector("#prev");
 var currElem = 0;
+var touchstartX = 0;
+var touchendX = 0;
 
 var setElem = function setElem() {
   heroPar.innerText = elements[currElem].text;
@@ -132,7 +135,7 @@ var setElem = function setElem() {
 };
 
 var elements = [{
-  text: "Phase One is free and open daily",
+  text: "Phase One is free & open daily",
   image: "../img/hero/img1.avif",
   link: "Plan your visit"
 }, {
@@ -148,6 +151,17 @@ nextElem.addEventListener("click", function () {
 prevElem.addEventListener("click", function () {
   currElem = 1 - currElem;
   setElem();
+});
+hero.addEventListener("touchstart", function (evt) {
+  touchstartX = evt.changedTouches[0].screenX;
+});
+hero.addEventListener("touchend", function (evt) {
+  touchendX = evt.changedTouches[0].screenX;
+
+  if (touchendX !== touchstartX) {
+    currElem = 1 - currElem;
+    setElem();
+  }
 });
 },{}],"ts/index.ts":[function(require,module,exports) {
 "use strict";
@@ -185,7 +199,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40753" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44951" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
