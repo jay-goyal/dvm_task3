@@ -16,6 +16,7 @@ const obsOptions = {
 };
 const obs = new IntersectionObserver(addOpen, obsOptions);
 const entryHeads = document.querySelectorAll(".section-heading");
+
 entryHeads.forEach((elem) => obs.observe(elem));
 obs.observe(document.querySelector("#hero-head-cont"));
 obs.observe(document.querySelector("#hero-par"));
@@ -26,11 +27,6 @@ let lastScrollY = window.scrollY;
 window.addEventListener("scroll", () => {
   if (lastScrollY > window.scrollY) {
     nav.id = "nav-open";
-    if (window.scrollY !== 0) {
-      setTimeout(() => {
-        nav.id = "nav-closed";
-      }, 1000);
-    }
   } else {
     nav.id = "nav-closed";
   }

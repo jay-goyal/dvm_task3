@@ -87,6 +87,7 @@
 
 .svg-green-on-hover-stroke {
   stroke: #131313;
+  transition: all 200ms ease-in-out;
 }
 .svg-green-on-hover-stroke:hover {
   stroke: #04c75c;
@@ -94,6 +95,7 @@
 
 .svg-green-on-hover-fill {
   fill: #131313;
+  transition: all 200ms ease-in-out;
 }
 .svg-green-on-hover-fill:hover {
   fill: #04c75c;
@@ -204,6 +206,7 @@ nav #nav-cont #lang-change {
 
 #hero {
   position: relative;
+  margin-top: 120px;
 }
 #hero-head-cont {
   width: clamp(300px, 85%, 1100px);
@@ -292,6 +295,24 @@ nav #nav-cont #lang-change {
 #hero-img.open {
   opacity: 1;
   transform: rotate(0);
+}
+#hero-img.close {
+  opacity: 0;
+  animation: slide 500ms ease-in-out;
+}
+@keyframes slide {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+  99% {
+    opacity: 0;
+    transform: translateY(400px) rotate(-20deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0) rotate(-20deg);
+  }
 }
 
 #entries {
@@ -417,19 +438,21 @@ nav #nav-cont #lang-change {
 #greenway {
   width: clamp(300px, 85%, 1100px);
   margin: 0 auto 150px;
-  z-index: 2;
-}
-#greenway-spl {
-  color: #00b451;
+  background: none;
 }
 #greenway p:first-child {
   margin-bottom: 50px;
   transform: translateY(20px);
   opacity: 0;
+  z-index: 2;
 }
 #greenway p:first-child.open {
   transform: translateY(0);
   opacity: 1;
+}
+#greenway-spl {
+  color: #00b451;
+  cursor: default;
 }
 #greenway-footer {
   display: grid;

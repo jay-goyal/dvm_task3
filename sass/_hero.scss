@@ -2,6 +2,7 @@
 
 #hero {
   position: relative;
+  margin-top: 120px;
 
   &-head-cont {
     width: clamp(300px, 85%, 1100px);
@@ -101,6 +102,28 @@
     &.open {
       opacity: 1;
       transform: rotate(0);
+    }
+
+    &.close {
+      opacity: 0;
+      animation: slide 500ms ease-in-out;
+    }
+
+    @keyframes slide {
+      0% {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+      }
+
+      99% {
+        opacity: 0;
+        transform: translateY(400px) rotate(-20deg);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(0) rotate(-20deg);
+      }
     }
   }
 }

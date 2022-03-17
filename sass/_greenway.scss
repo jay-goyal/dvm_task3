@@ -4,21 +4,23 @@
 #greenway {
   width: clamp(300px, 85%, 1100px);
   margin: 0 auto 150px;
-  z-index: 2;
-
-  &-spl {
-    color: vars.$rail-park-green;
-  }
+  background: none;
 
   p:first-child {
     margin-bottom: 50px;
     transform: translateY(20px);
     opacity: 0;
+    z-index: 2;
 
     &.open {
       transform: translateY(0);
       opacity: 1;
     }
+  }
+
+  &-spl {
+    color: vars.$rail-park-green;
+    cursor: default;
   }
 
   &-footer {

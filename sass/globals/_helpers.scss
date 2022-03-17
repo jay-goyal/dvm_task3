@@ -94,6 +94,7 @@
 
 .svg-green-on-hover-stroke {
   stroke: vars.$black;
+  transition: all 200ms ease-in-out;
 
   &:hover {
     stroke: vars.$neon-green;
@@ -102,6 +103,7 @@
 
 .svg-green-on-hover-fill {
   fill: vars.$black;
+  transition: all 200ms ease-in-out;
 
   &:hover {
     fill: vars.$neon-green;
