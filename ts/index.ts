@@ -2,23 +2,18 @@ import "./hero";
 
 const nav = document.querySelector("nav") as HTMLDivElement;
 
-const addOpen = (entries, observer) => {
+const addOpen = (entries: IntersectionObserverEntry[], observer) => {
   entries.forEach((entry) => {
-    let classes = entry.classList;
-    if (!classes.contains("open")) {
-      classes.add("open");
+    if (entry.isIntersecting) {
+      entry.target.classList.add("open");
     }
-    entry.classList = classes;
   });
 };
 
 const obsOptions = {};
 const obs = new IntersectionObserver(addOpen, obsOptions);
 
-const els = document.querySelectorAll(":not(.open)");
-els.forEach((elem) => {
-  obs.observe(elem);
-});
+obs.observe(document.querySelector("body"));
 
 let lastScrollY = window.scrollY;
 window.addEventListener("scroll", () => {

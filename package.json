@@ -2,11 +2,10 @@
   "scripts": {
     "dev": "yarn copy-assets && parcel index.html",
     "copy-assets": "cp -rv img dist/",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
   },
   "devDependencies": {
     "@parcel/transformer-sass": "2.3.2",
-    "gh-pages": "^3.2.3",
     "parcel": "^2.3.2",
     "parcel-bundler": "^1.12.5",
     "prettier": "^2.5.1",
